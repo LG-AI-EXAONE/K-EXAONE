@@ -1,0 +1,173 @@
+<|tool_declare|>
+# Tools
+<tool>{"type": "function", "function": {"type": "function", "name": "search", "description": "Discovery search focusing on diverse online sources.", "parameters": {"type": "object", "properties": {"query": {"type": "string", "description": "Search query to send to Search API."}}, "required": ["query"]}}}</tool>
+<tool>{"type": "function", "function": {"type": "function", "name": "open", "description": "Open a specific website by providing its URL and retrieve a concise summary of the website's content.", "parameters": {"type": "object", "properties": {"url": {"type": "string", "description": "The target website URL or domain"}, "pattern": {"type": "string", "description": "The target pattern of the webpage content to be summarized."}}, "required": ["url", "pattern"]}}}</tool>
+<|endofturn|>
+<|system|>
+You're a helpful assistant.<|endofturn|>
+<|user|>
+According to the 'Wellness Trends Report 2025: How Wellness Got Smarter', what do the Preferred Hotels & Resorts’ Travel Trends predictions for 2025 indicate about longevity wellness?<|endofturn|>
+<|assistant|>
+<think>
+The user is asking about a specific report: "Wellness Trends Report 2025: How Wellness Got Smarter" and specifically about Preferred Hotels & Resorts' Travel Trends predictions for 2025 regarding longevity wellness.
+
+I need to search for this report. Let's search for the report title.
+</think>
+
+<tool_call>{"name": "search", "arguments": {"query": "\"Wellness Trends Report 2025: How Wellness Got Smarter\" Preferred Hotels & Resorts Travel Trends predictions 2025 longevity wellness"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>[{"title": "Wellness Trends Report 2025: How Wellness Got Smarter", "url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "description": "Wellness Trends Report 2025: How Wellness Got Smarter. In this second ... Longevity is also a trend highlighted in Preferred Hotels & Resorts' ..."}]</tool_result><|endofturn|>
+<|assistant|>
+<think>
+The search result shows a Forbes article with that title. Let's open it.
+</think>
+
+<tool_call>{"name": "open", "arguments": {"url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "pattern": "Preferred Hotels & Resorts Travel Trends predictions 2025 longevity wellness"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>Summary:
+The Forbes Wellness Trends Report 2025 by Angelina Villa-Clarke, published February 4, 2025, centers on smarter, tech-enabled longevity wellness and the integration of advanced science with traditional practices. It notes that longevity wellness is at the forefront of Preferred Hotels & Resorts’ Travel Trends predictions for 2025, highlighting biohacking, high-tech recovery, and brain-health initiatives across luxury properties. Examples include ZEM Wellness Clinic Altea in Spain (opened last month) with a ten-acre site featuring 95 suites and a 4,000 sqm spa, plus Europe’s first Metawell Centre; Alohilani Resort Waikiki Beach’s Fit Waikiki and Drip Hawaii IV lounge; and longevity-focused offerings at Lefay Resort & Spa Dolomiti and The Alpina Gstaad. The report also covers Accor’s Wellness Trends 2025, which stresses science-based, transparent wellness and a holistic approach. Additionally, brain fitness emerges as a major theme, with investments in brain-health services, nootropics, and tech-driven cognitive enhancement.
+
+Answer to the question:
+Preferred Hotels & Resorts Travel Trends predictions for 2025 identify longevity wellness as a leading trend, combining advanced science and technology with traditional wellness practices to support recovery, healthy aging, and mental well-being. The article provides concrete examples of how this trend is being enacted across luxury properties and destinations.
+
+In concrete terms, ZEM Wellness Clinic Altea in Spain opened recently (the article states it “opened last month”) and is described as a pioneering medical clinic offering a blend of cutting-edge technology and traditional wellness. It sits on ten acres and includes 95 suites and a 4,000 square meter spa, with a Recovery Unit featuring cryotherapy, hyperbaric oxygen, and pressotherapy, and it showcases Europe’s first Metawell Centre developed by the Gharieni Group to deliver anti-inflammatory effects, improved sleep, detox and lymph drainage, and enhanced recovery.
+
+The piece also highlights ongoing or upcoming longevity-focused experiences at other properties: Lefay Resort & Spa Dolomiti in Italy and The Alpina Gstaad in Switzerland, both part of the broader longevity-wellness menu; SIRO One Za’abeel in Dubai (focusing on hi-tech wellness) and a second SIRO property, SIRO Boka Palace in Montenegro, opening in May 2025 with a Destination Fitness pillar offering outdoor activities and recovery labs. In Waikiki, Alohilani Resort’s Fit Waikiki and the Drip Hawaii IV lounge illustrate hotel-based longevity and recovery services.
+
+Brain fitness is underscored as a major trend within longevity wellness. Accor’s Wellness Trends report frames brain health as a rising priority in a longer-living population, with four market directions: brain supplements, nootropic-infused drinks, high-tech brain devices, and personalized brainwave programs. Viavi’s brain-health service, developed with Dr. Sabine Donnai, offers a comprehensive brain evaluation and personal health strategy for £12,000, plus a pTau blood test available for £1,000. The article also notes that brain-health initiatives are being integrated into wellness offerings more broadly, including services spearheaded by practitioners like Dr. Donnai and Viavi, in the context of a broader move toward science-backed, transparent wellness. Accor’s Emlyn Brown is quoted describing wellness in 2025 as grounded in science, authenticity, technology, trust, and sustainable, whole-self wellbeing.</tool_result><|endofturn|>
+<|assistant|>
+<think>
+The summary provides a detailed answer. However, the user's question is: "According to the 'Wellness Trends Report 2025: How Wellness Got Smarter', what do the Preferred Hotels & Resorts’ Travel Trends predictions for 2025 indicate about longevity wellness?"
+
+The summary indicates that Preferred Hotels & Resorts' Travel Trends predictions for 2025 identify longevity wellness as a leading trend, combining advanced science and technology with traditional wellness practices to support recovery, healthy aging, and mental well-being. It mentions biohacking, high-tech recovery, and brain-health initiatives across luxury properties.
+
+But perhaps the user wants a more concise answer. Let's see if we can extract the exact phrasing from the article. Let's open the article again with a more specific pattern.
+</think>
+
+<tool_call>{"name": "open", "arguments": {"url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "pattern": "Preferred Hotels & Resorts"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>Summary:
+The Wellness Trends Report 2025: How Wellness Got Smarter (Forbes, Feb 4, 2025) discusses high-tech, science-informed wellness and longevity therapies. It notes that longevity wellness is a central focus in Preferred Hotels & Resorts’ Travel Trends predictions for 2025. The article cites several Preferred Hotels properties as examples, including Alohilani Resort Waikiki Beach (Honolulu) with a reimagined Fit Waikiki wellness center and the Drip Hawaii IV lounge, Lefay Resort & Spa Dolomiti (Italy), and The Alpina Gstaad (Switzerland). It describes these properties as integrating advanced wellness offerings—such as cryotherapy, oxygen therapy, and advanced skin treatments—with luxurious accommodations to support health, longevity, and well-being. The piece positions brain fitness as an emerging wellness priority and situates these initiatives within the broader trend toward tech-enabled, authentic wellness experiences promoted by Preferred Hotels & Resorts.
+
+Answer to the question:
+What does the page say about Preferred Hotels & Resorts?
+
+- The article identifies longevity wellness as a leading trend in Preferred Hotels & Resorts’ Travel Trends predictions for 2025. It quotes that longevity wellness combines advanced science and technology with traditional practices to support recovery, healthy aging, and mental well-being.
+- It provides concrete examples of Preferred Hotels properties embracing longevity wellness:
+  - Alohilani Resort Waikiki Beach in Honolulu, which has reimagined its wellness center (Fit Waikiki) for enhanced experiences and offers cutting-edge therapies, including Waikiki’s first IV lounge at Drip Hawaii medical spa.
+  - Lefay Resort & Spa Dolomiti in Italy, described as a wellness hotel that is part of Preferred Hotels & Resorts.
+  - The Alpina Gstaad in Switzerland, also listed as a Preferred Hotels & Resorts property embracing longevity wellness.
+- The article notes that these integrative wellness offerings, along with luxurious accommodations, are becoming a go-to option for guests seeking to enhance health, longevity, and overall quality of life.</tool_result><|endofturn|>
+<|assistant|>
+<think>
+The summary gives a good answer. However, the user might want a direct quote or specific indication. Let's search for the phrase "Preferred Hotels & Resorts’ Travel Trends predictions for 2025 indicate" or similar.
+</think>
+
+<tool_call>{"name": "search", "arguments": {"query": "\"Preferred Hotels & Resorts\" \"Travel Trends\" 2025 longevity wellness"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>[{"title": "Preferred Hotels & Resorts Unveils 2025 Travel Trends", "url": "https://www.luxurytravelmagazine.com/news-articles/preferred-hotels-resorts-unveils-2025-travel-trends", "description": "Preferred Hotels & Resorts, the world's largest independent hotel brand, has unveiled the top travel trends shaping the year ahead."}, {"title": "Wellness Trends Report 2025: How Wellness Got Smarter", "url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "description": "Longevity is also a trend highlighted in Preferred Hotels & Resorts' Travel Trends predictions for 2025. “Longevity wellness is at the forefront ..."}, {"title": "ILTM Cannes 2025: The Luxury Travel Trends That ...", "url": "https://www.hertelier.com/post/iltm-cannes-2025", "description": "ILTM Cannes 2025: The Luxury Travel Trends That Actually Matter ... Preferred Hotels & Resorts is leaning into this shift. CEO Lindsey ..."}, {"title": "Virtuoso, Globetrender flag luxury travel trends to watch", "url": "https://latteluxurynews.com/2024/10/03/virtuoso-globetrender-luxury-travel-trends/", "description": "Virtuoso and Globetrender have complied a list of luxury travel trends to watch in 2025 ... Preferred Hotels & Resorts adds eight hotels ..."}, {"title": "2025 Hot New Hotel Preview: Part 3 - by Pavia + Jeralyn", "url": "https://fathomwaytogo.substack.com/p/new-hotels-2025-europe", "description": "As we already reported in our 2025 travel trends report, hotels are merging into trains and vice versa. ... Part of Preferred Hotels & Resorts' ..."}, {"title": "From Seaside Sanctuaries to Cool Culture Capitals", "url": "https://www.hospitalitynet.org/news/4124170.html", "description": "Preferred Hotels & Resorts Welcomes 14 ... Travel Trends through AI Innovation, Sustainability and New Consumer Insights at WTM London 2025."}, {"title": "Six Senses Unveils Calendar of 2024 Wellness Retreats", "url": "https://www.travelagewest.com/Travel/Hotels/six-senses-retreats", "description": "... Travel Trends for 2026. From Our Partners. More Stories Like This. The ... Preferred Hotels & Resorts Grows Global Portfolio · Blue Diamond ..."}, {"title": "Noelle Mateer", "url": "https://www.hoteldive.com/editors/nmateer/", "description": "Preferred Hotels & Resorts continues US expansion with California lodge ... The wellness travel trends that will impact hotel amenities in 2024. Jan. 25 ..."}, {"title": "TRAVELWEEK FEBRUARY 27 by Travelweek", "url": "https://issuu.com/travelweek/docs/travelweek_february_27_be4feca6dd7cb0", "description": "It's one of the fastest growing travel trends for 2025. According to ... Preferred Hotels & Resorts launches travel advisor portal. NEW ..."}, {"title": "PoB Hotels releases 2026 Whitepaper on luxury travel ...", "url": "https://www.linkedin.com/posts/the-hotel-magazine_pob-whitepaper-report-2026-activity-7387111501813428224-ZslR", "description": "PoB Hotels releases 2026 Whitepaper on luxury travel trends in Britain ... Learn more from Pia-Marie Ametsbichler (Preferred Hotels & Resorts) ..."}]</tool_result><|endofturn|>
+<|assistant|>
+<think>
+Let's open the Forbes article again, but maybe we need to scroll to find the exact sentence. Let's open with a pattern that captures the relevant paragraph.
+</think>
+
+<tool_call>{"name": "open", "arguments": {"url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "pattern": "Longevity is also a trend highlighted in Preferred Hotels & Resorts'"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>Summary:
+Longevity wellness is highlighted as a key trend in Preferred Hotels & Resorts’ Travel Trends predictions for 2025. The Forbes article notes that longevity wellness combines advanced science and technology with traditional practices to support recovery, healthy aging, and mental well-being, including biohacking and high-tech treatments. Examples cited include Alohilani Resort Waikiki Beach’s Fit Waikiki wellness center, the Drip Hawaii IV lounge, and a broader slate of properties such as Lefay Resort & Spa Dolomiti, The Alpina Gstaad, ZEM Wellness Clinic Altea, and the RoseBar Longevity Clinic at Six Senses Ibiza (open since 2023). The piece also mentions new hi-tech wellness initiatives at SIRO hotels (Dubai) and a May 2025 opening for SIRO Boka Palace in Montenegro, all framed within a movement toward sleep technology, brain health, and personalized recovery services. Additionally, the article references Accor’s 2025 Wellness Trends report and a brain-fitness focus involving Viavi and brain-health services priced at £12,000 for a full evaluation and £1,000 for a pTau blood test.
+
+Answer to the question:
+Longevity is a trend highlighted in Preferred Hotels & Resorts’ Travel Trends predictions for 2025, described as longevity wellness that blends advanced science and technology with traditional wellness practices to support recovery, healthy aging, and mental well-being. The article demonstrates this trend through several concrete examples across luxury and wellness-focused properties. At Alohilani Resort Waikiki Beach in Honolulu, the wellness offering includes Fit Waikiki, a reimagined wellness center, and the Drip Hawaii medical spa providing Hawaii’s first IV lounge, illustrating institutionalized longevity-oriented services within a resort setting.
+
+Other highlighted properties include Lefay Resort & Spa Dolomiti in Italy and The Alpina Gstaad in Switzerland, which are described as integrating longevity-focused offerings with luxury accommodations. ZEM Wellness Clinic Altea in Spain is presented as a medical-wacenter operation powered by advanced technology and cross-disciplinary specialists, with features such as a Metawell Centre from Gharieni Group for mind-body technologies and an exclusive Recovery Unit with cryotherapy, hyperbaric oxygen, and pressotherapy. The RoseBar Longevity Clinic at Six Senses Ibiza, opened in 2023, is cited as a pioneer in merging health technologies with holistic spa practices to boost mental and physical well-being.
+
+The article also discusses high-tech and brain-health aspects of longevity, including SIRO One Za’abeel in Dubai and the upcoming SIRO Boka Palace in Montenegro (opening May 2025) with a Destination Fitness pillar and recovery-focused facilities. The brain-fitness component is further developed through Accor’s wellness initiatives and collaborations with Viavi and Dr. Sabine Donnai, offering brain-health services such as a £12,000 brain evaluation and a £1,000 pTau blood test, and emphasizing four trends: brain supplements, nootropic-infused drinks, high-tech brain devices, and personalized brainwave programs to optimize cognitive performance. Together, these examples illustrate how Preferred Hotels & Resorts’ travel trends for 2025 foreground longevity as a central theme in wellness offerings and hotel experiences.</tool_result><|endofturn|>
+<|assistant|>
+<think>
+The summary provides a comprehensive answer. However, the user may want a concise answer: what do the predictions indicate about longevity wellness? The summary says: longevity wellness is highlighted as a key trend, combining advanced science and technology with traditional practices to support recovery, healthy aging, and mental well-being.
+
+But perhaps the user wants the exact phrasing from the report. Let's search for the phrase "Preferred Hotels & Resorts’ Travel Trends predictions for 2025 indicate" within the article. Use open with pattern "indicate".
+</think>
+
+<tool_call>{"name": "open", "arguments": {"url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "pattern": "indicate"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>Summary:
+The Wellness Trends Report 2025: How Wellness Got Smarter, by Angelina Villa-Clarke and published February 4, 2025, explores the shift toward high-tech solutions for health, longevity therapies, and integrated wellness experiences. It highlights a wave of new wellness facilities and tech-enabled services, including ZEM Wellness Clinic Altea in Spain, which opened recently and combines medicine, nutrition, and a Recovery Unit with advanced technologies such as cryotherapy and hyperbaric oxygen. The piece notes industry voices—such as Franck De Weerdt of ZEM, Dr. Preema Vig, and Talana Bestall of RoseBar/Six Senses Ibiza—emphasizing the commodification of cutting-edge treatments like Metawell mind-body technologies and Profhilo regenerative skincare. It traces trends in longevity-focused offerings at luxury brands (RoseBar, Lefay Resort & Spa, The Alpina Gstaad, SIRO hotels) and references Preferrred Hotels & Resorts’ 2025 outlook on integrating science, tech, and authenticity. A notable feature is brain fitness as a rising priority, with Brain health services priced at about £12,000 for a comprehensive brain evaluation and £1,000 for a pTau blood test via Viavi, plus four key brain-boosting categories (supplements, nootropic drinks, devices, and personalized programs). The article also covers sleep technology, delivery of tailored recovery programs, and the expansion of wellness offerings across Accor’s and SIRO’s portfolios, including openings and plans for 2025.
+
+Answer to the question:
+The page indicates that Wellness Trends Report 2025: How Wellness Got Smarter presents a detailed look at how wellness is becoming more high-tech and science-based in 2025. It identifies several core developments:
+
+- High-tech wellness and longevity focus: clinics and hotels are integrating advanced medical technology, data-driven recovery, and science-backed therapies to extend healthy lifespans. Examples include ZEM Wellness Clinic Altea in Spain, which opened recently, and RoseBar Longevity Clinic at Six Senses Ibiza, which has been advancing health-tech-integrated spa experiences since 2023. The MedTech and recovery tech highlighted include Metawell mind-body technologies and a Recovery Unit featuring cryotherapy, hyperbaric oxygen, and pressotherapy, with explanations from executives such as Franck De Weerdt (CEO of ZEM) and Talana Bestall (RoseBar).
+
+- Brain fitness as a principal trend: Accor and Viavi are spotlighting brain health innovations. Accor cites brain-focused offerings through partners like Viavi, with a brain health service priced at £12,000 for a comprehensive brain evaluation and £1,000 for the pTau blood test. Dr. Sabine Donnai discusses a holistic brain health program and data-driven approach to cognitive performance, aiming to future-proof cognition.
+
+- Longevity and sleep/wellness integration in hospitality: brands such as Lefay Resort & Spa, The Alpina Gstaad, and SIRO hotels are expanding longevity wellness, sleep intelligence, and recovery labs. SIRO One Za’abeel in Dubai emphasizes sleep technology, including AI sleep monitors and regulated mattresses, with a second SIRO property, SIRO Boka Palace in Montenegro, planned to open in May 2025, featuring dedicated fitness and recovery labs and personalized nutrition plans.
+
+- Industry voices and brand perspectives: Emlyn Brown from Accor’s Wellness Trends report stresses that wellness in 2025 should be grounded in science and authenticity, balancing technology with informed choices and sustainable habits. Emlyn Brown also notes the broader shift toward transparent and holistic well-being, beyond hype. The article also references Dr. Preema Vig’s skincare innovations and Profhilo’s regenerative approach, illustrating how cosmetic and medical wellness converge.</tool_result><|endofturn|>
+<|assistant|>
+<think>
+The summary doesn't directly answer the question. Perhaps we need to search for the exact phrase "Preferred Hotels & Resorts’ Travel Trends predictions for 2025 indicate about longevity wellness". Let's search more broadly.
+</think>
+
+<tool_call>{"name": "search", "arguments": {"query": "\"Preferred Hotels & Resorts\" \"longevity wellness\" 2025"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>[{"title": "Preferred Hotels & Resorts Unveils 2025 Travel Trends", "url": "https://www.luxurytravelmagazine.com/news-articles/preferred-hotels-resorts-unveils-2025-travel-trends", "description": "Other Preferred Hotels & Resorts properties also embracing longevity wellness with services such as cryotherapy, oxygen therapy, and ..."}, {"title": "Wellness Trends Report 2025: How Wellness Got Smarter", "url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "description": "Other Preferred Hotels & Resorts properties also embracing longevity wellness, with services such as cryotherapy, oxygen therapy, and advanced ..."}, {"title": "WELLNESS GUIDE: Vilalara Longevity Thalassa & Medical ...", "url": "https://luxnomade.com/resorts/wellness-guide-vilalara-longevity-thalassa-medical-spa/", "description": "Located right by the sea, the long-established Vilalara Thalassa Resort, in the Algarve – Portugal joined forces with Longevity Wellness Worldwide to create ..."}, {"title": "Quiet luxury: When wealth goes silent", "url": "https://en.10minhotel.com/2025/08/19/quiet-luxury-when-wealth-goes-silent/", "description": "... 2025 The era ... longevity, wellness, and life-enhancing experiences. ... Sesimbra Oceanfront Hotel Joins the Preferred Hotels & Resorts Lifestyle Collection."}, {"title": "Page 44", "url": "https://hoteldesigns.net/page/44/?attachment_id", "description": "... Longevity Wellness Worldwide's core principles of restoration and regeneration… ... The Londoner, a member of the prestigious Preferred Hotels & Resorts ..."}, {"title": "UAE'S NEXT MASTERMIND AWARDS 2025 🌟 Business & ...", "url": "https://www.instagram.com/p/DI2nRdISPwt/", "description": "Al Habtoor Palace Dubai, Preferred Hotels & Resorts. Photo by MASTERMIND_AWARDS in Al Habtoor Palace Dubai, Preferred Hotels & Resorts with @dubaitv. dubaitv."}, {"title": "Town & Country USA - Summer 2025 | PDF | Flight Attendant", "url": "https://www.scribd.com/document/872321029/Town-Country-USA-Summer-2025", "description": "© 2025 Preferred Hotels & Resorts. HOTEL CASA DEL MAR, Santa Monica ... encers are hosting glucose challenges (com- longevity wellness company Danford Works."}, {"title": "LURA Lifestyle Management (@luralifestyle)", "url": "https://www.instagram.com/luralifestyle/?hl=en", "description": "... Preferred Hotels & Resorts and Bucketlist Xperiences. This rare opportunity invites travellers to explore seven legendary destinations - Singapore, India ..."}, {"title": "UAE'S NEXT MASTERMIND AWARDS 2025 🌟 Business & ...", "url": "https://www.instagram.com/p/DLIbJTNyu34/", "description": "... 2025 Business & Corporate Leaders | Coaching Leaders | Authors 21st ... Photo by MASTERMIND_AWARDS in Al Habtoor Palace Dubai, Preferred Hotels & Resorts ..."}, {"title": "Real Estate Industry Media (@realestateindustrymedia)", "url": "https://www.instagram.com/realestateindustrymedia/?hl=en", "description": "Photo by Zulfiqar Ali in Al Habtoor Palace Dubai, Preferred Hotels & Resorts with @ ... longevity, wellness, and thoughtful placemaking ..."}]</tool_result><|endofturn|>
+<|assistant|>
+<think>
+Let's open the Forbes article again, but maybe the summary we have is sufficient. The user asked: "According to the 'Wellness Trends Report 2025: How Wellness Got Smarter', what do the Preferred Hotels & Resorts’ Travel Trends predictions for 2025 indicate about longevity wellness?"
+
+Based on the summary, the answer is that longevity wellness is a leading trend highlighted in Preferred Hotels & Resorts' Travel Trends predictions for 2025, combining advanced science and technology with traditional practices to support recovery, healthy aging, and mental well-being. It includes biohacking, high-tech recovery, and brain-health initiatives across luxury properties.
+
+We can provide a concise answer with supporting details. Let's craft the answer.
+
+But maybe we should verify by opening the Forbes article directly and looking for the exact paragraph. Let's open with a pattern that captures the paragraph containing "Preferred Hotels & Resorts’ Travel Trends predictions for 2025".
+</think>
+
+<tool_call>{"name": "open", "arguments": {"url": "https://www.forbes.com/sites/angelinavillaclarke/2025/02/04/wellness-trends-report-2025-how-wellness-got-smarter/", "pattern": "Preferred Hotels & Resorts\u2019 Travel Trends predictions for 2025"}}</tool_call><|endofturn|>
+<|tool|>
+<tool_result>Summary:
+Longevity wellness is at the forefront of 2025 wellness trends, combining advanced science and technology with traditional practices to support recovery, healthy aging, and mental well-being. Preferred Hotels & Resorts’ Travel Trends predictions for 2025 highlight longevity as a key theme, including biohacking recovery and tech-enabled wellness across its properties. Examples cited include Alohilani Resort Waikiki Beach in Honolulu, whose Fit Waikiki wellness center is reimagined with offerings like rooftop aerial yoga and a full-service spa, plus Drip Hawaii’s IV lounge. Other Preferred Hotels & Resorts properties embracing longevity wellness include Lefay Resort & SPA Dolomiti in Italy and The Alpina Gstaad in Switzerland, which offer integrative services such as cryotherapy, oxygen therapy, and advanced skin treatments. These high-tech, science-backed offerings paired with luxurious accommodations are described as becoming the go-to for health, longevity, and overall quality of life.
+
+Answer to the question:
+Preferred Hotels & Resorts’ Travel Trends predictions for 2025 identify longevity wellness as a leading trend. The report describes longevity wellness as the integration of advanced science and technology with traditional wellness practices to support recovery, healthy aging, and mental well-being. It emphasizes a shift toward biohacking recovery and high-tech wellness experiences within its hotel portfolio, illustrating how luxury properties are incorporating cutting-edge health services.
+
+Specific examples from Preferred Hotels & Resorts properties include:
+- Alohilani Resort Waikiki Beach (Honolulu): The resort’s wellness center, Fit Waikiki, has been reimagined to offer features such as rooftop aerial yoga and a full-service spa. The Drip Hawaii medical spa is noted as providing Waikiki’s first IV lounge, illustrating the move toward advanced, tech-enabled health services.
+
+- Lefay Resort & SPA Dolomiti (Italy) and The Alpina Gstaad (Switzerland): These Preferred Hotels & Resorts properties are highlighted as offering integrative longevity wellness, including services such as cryotherapy, oxygen therapy, and advanced skin treatments.
+
+The article frames these offerings as part of a broader shift where enhanced wellness experiences—driven by science and technology—are combined with luxurious accommodations to become the default for guests seeking health, longevity, and improved quality of life.</tool_result><|endofturn|>
+<|assistant|>
+<think>
+Now we have a clear answer. The summary indicates that Preferred Hotels & Resorts’ Travel Trends predictions for 2025 identify longevity wellness as a leading trend, combining advanced science and technology with traditional wellness practices to support recovery, healthy aging, and mental well-being. It includes biohacking recovery and high-tech wellness experiences across properties.
+
+We can answer accordingly.
+
+But perhaps the user wants a more specific indication: maybe the report says that longevity wellness is "at the forefront" or "a key theme". The summary says "Longevity wellness is at the forefront of 2025 wellness trends" and "Preferred Hotels & Resorts’ Travel Trends predictions for 2025 highlight longevity as a key theme".
+
+Thus, the answer: The predictions indicate that longevity wellness is a leading trend, combining advanced science and technology with traditional practices to support recovery, healthy aging, and mental well-being.
+
+We can include examples.
+
+Let's formulate the final answer.
+
+We'll cite the source: Forbes article "Wellness Trends Report 2025: How Wellness Got Smarter". We'll reference the summary.
+
+Now, answer.
+</think>
+
+Based on the **Forbes Wellness Trends Report 2025: How Wellness Got Smarter**, the **Preferred Hotels & Resorts’ Travel Trends predictions for 2025** identify **longevity wellness as a leading trend**.  
+
+Specifically, the report states that **“longevity wellness is at the forefront of 2025 wellness trends”** and that **Preferred Hotels & Resorts’ Travel Trends predictions highlight longevity as a key theme**.  
+
+**What this indicates about longevity wellness:**  
+- **Integration of advanced science and technology with traditional wellness practices** to support recovery, healthy aging, and mental well‑being.  
+- A shift toward **biohacking recovery** and **high‑tech wellness experiences** across luxury properties.  
+- The trend is exemplified by properties such as:  
+  - **Alohilani Resort Waikiki Beach** (Honolulu) – reimagined Fit Waikiki wellness center and Drip Hawaii IV lounge.  
+  - **Lefay Resort & SPA Dolomiti** (Italy) – offering cryotherapy, oxygen therapy, and advanced skin treatments.  
+  - **The Alpina Gstaad** (Switzerland) – providing integrative longevity‑focused services.  
+
+In essence, the predictions signal that **longevity wellness is moving beyond conventional spa offerings toward science‑backed, tech‑enabled experiences that combine cutting‑edge therapies with luxury accommodations** to help guests extend healthy lifespans and enhance overall quality of life.  
+
+*Source: Forbes Wellness Trends Report 2025: How Wellness Got Smarter (published February 4, 2025).*<|endofturn|>
