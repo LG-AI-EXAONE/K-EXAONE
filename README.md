@@ -19,7 +19,7 @@
   <a href="https://github.com/LG-AI-EXAONE/K-EXAONE" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/🖥️-GitHub-2B3137?style=for-the-badge" alt="GitHub">
   </a>
-  <a href="https://friendli.ai/suite/0vabuzmPYUNt/RFZtL3MqChNK/serverless-endpoints/LGAI-EXAONE/K-EXAONE-236B-A23B/overview" style="text-decoration: none;">
+  <a href="https://friendli.ai/model/LGAI-EXAONE/K-EXAONE-236B-A23B" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/✈️_API-Try_on_FriendliAI-2649BC?style=for-the-badge" alt="FriendliAI">
   </a>
 </div>
