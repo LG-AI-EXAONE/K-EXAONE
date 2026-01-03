@@ -438,7 +438,9 @@ print(tokenizer.decode(output_ids, skip_special_tokens=True))
 
 ### Agentic tool use
 
-For your AI-powered agent, you can integrate external functionalities in the following OpenAI-style tool description format. Here is an example of creating a tool description from a Python function.
+For your AI-powered agent, you can leverage K-EXAONE’s tool calling capability. 
+The K-EXAONE model is compatible with both OpenAI and HuggingFace tool calling specifications. 
+The example below demonstrates tool calling using HuggingFace’s docstring-to-tool-schema utility.
 
 Please check the [example file](examples/example_output_search.txt) for an example of a search agent conversation using K-EXAONE.
 
@@ -548,6 +550,7 @@ After you install the vLLM library with an EXAONE-MoE implementation, you can ru
 ```bash
 vllm serve LGAI-EXAONE/K-EXAONE-236B-A23B \
     --reasoning-parser deepseek_v3 \
+    --tensor-parallel-size 4 \
     --enable-auto-tool-choice \
     --tool-call-parser hermes
 ```
@@ -576,6 +579,7 @@ If you are interested in using MTP weights for speculative decoding, add accordi
 ```bash
 vllm serve LGAI-EXAONE/K-EXAONE-236B-A23B \
     --reasoning-parser deepseek_v3 \
+    --tensor-parallel-size 4 \
     --enable-auto-tool-choice \
     --tool-call-parser hermes \
     --no-enable-prefix-caching \
@@ -593,6 +597,7 @@ Practically, you can serve the model with a 256K context length using tensor par
 ```bash
 python -m sglang.launch_server \
     --model LGAI-EXAONE/K-EXAONE-236B-A23B \
+    --tp-size 4 \
     --reasoning-parser qwen3
 ```
 
@@ -642,6 +647,7 @@ If you are interested in in using MTP weights for speculative decoding, add acco
 ```bash
 python -m sglang.launch_server \
     --model LGAI-EXAONE/K-EXAONE-236B-A23B \
+    --tp-size 4 \
     --reasoning-parser qwen3 \
     --speculative-algorithm EAGLE \
     --speculative-num-steps 3 \
