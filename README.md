@@ -26,6 +26,12 @@
 
 <br>
 
+
+<div align="center">
+<table><tr><td>🆓 <span style="color: orange"> <b>Free API until Jan 28th, 2026</b>! </span> Try on ⬆️ FriendliAI ✈️</td></tr></table>
+</div>
+<br>
+
 <br><br>
 
 We introduce **K-EXAONE**, a large-scale multilingual language model developed by LG AI Research. Built using a Mixture-of-Experts architecture, K-EXAONE features **236 billion total** parameters, with **23 billion active** during inference. Performance evaluations across various benchmarks demonstrate that K-EXAONE excels in reasoning, agentic capabilities, general knowledge, multilingual understanding, and long-context processing.
