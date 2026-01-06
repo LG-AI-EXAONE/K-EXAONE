@@ -13,7 +13,7 @@
   <a href="#" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/📝-Blog_(TBU)-E343BD?style=for-the-badge" alt="Blog">
   </a>
-  <a href="https://www.lgresearch.ai/data/cdn/upload/K-EXAONE_Technical_Report.pdf" style="text-decoration: none;">
+  <a href="https://arxiv.org/abs/2601.01739" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/📑-Technical_Report-684CF4?style=for-the-badge" alt="Technical Report">
   </a>
   <a href="https://github.com/LG-AI-EXAONE/K-EXAONE" style="text-decoration: none;">
@@ -44,7 +44,7 @@ We introduce **K-EXAONE**, a large-scale multilingual language model developed b
 - **Agentic Capabilities:** Demonstrates superior tool-use and search capabilities via **multi-agent strategies.**
 - **Safety & Ethics:** Aligned with **universal human values**, the model uniquely incorporates **Korean cultural and historical contexts** to address regional sensitivities often overlooked by other models. It demonstrates high reliability across diverse risk categories.
 
-For more details, please refer to the [technical report](https://www.lgresearch.ai/data/cdn/upload/K-EXAONE_Technical_Report.pdf).
+For more details, please refer to the [technical report](https://arxiv.org/abs/2601.01739).
 
 ![main_figure](assets/main_figure.png)
 
@@ -67,7 +67,7 @@ For more details, please refer to the [technical report](https://www.lgresearch.
 - 2024.08.07: We released the EXAONE 3.0 7.8B instruction-tuned model. Check out the [model](https://huggingface.co/collections/LGAI-EXAONE/exaone-30)!
 ## Performance
 
-The following table shows the evaluation results of the K-EXAONE model in reasoning mode, compared to our previous model, [EXAONE-4.0](https://github.com/LG-AI-EXAONE/EXAONE-4.0), and other competing models. The evaluation details can be found in the [technical report](https://www.lgresearch.ai/data/cdn/upload/K-EXAONE_Technical_Report.pdf).
+The following table shows the evaluation results of the K-EXAONE model in reasoning mode, compared to our previous model, [EXAONE-4.0](https://github.com/LG-AI-EXAONE/EXAONE-4.0), and other competing models. The evaluation details can be found in the [technical report](https://arxiv.org/abs/2601.01739).
 
 <table>
 	<tr>
@@ -515,8 +515,7 @@ You can test the model with simple chat CLI by running the command below:
     -c 131072 -n 32768 \
     --no-context-shift \
     --jinja \
-    --chat-template-file $YOUR_MODEL_DIR/chat_template.jinja \
-    --host 0.0.0.0 --port 8080
+    --chat-template-file $YOUR_MODEL_DIR/chat_template.jinja
 ```
 
 You can also launch a server by running the command below:
@@ -693,7 +692,7 @@ The model is licensed under [K-EXAONE AI Model License Agreement](./LICENSE)
 @article{k-exaone,
   title={K-EXAONE Technical Report},
   author={{LG AI Research}},
-  journal={arXiv preprint arXiv:TBD},
+  journal={arXiv preprint arXiv:2601.01739},
   year={2025}
 }
 ```
