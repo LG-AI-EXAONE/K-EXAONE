@@ -1,7 +1,7 @@
 <br>
 <br>
 <p align="center">
-<img src="assets/K-EXAONE_Symbol_3d.png" width="400">
+<img src="assets/K-EXAONE_logo_gray.png" width="400">
 <br>
 <br>
 <br>
@@ -354,22 +354,22 @@ Until the libraries officially support K-EXAONE, you need to install the require
 
 #### Transformers
 
-You can install the latest version of Transformers with support for EXAONE-MoE architecture from [this repository](https://github.com/Aim-Highest/transformers).
+You can install the latest version of Transformers with support for EXAONE-MoE architecture from [this repository](https://github.com/nuxlear/transformers/tree/add-exaone-moe).
 The base version of Transformers is `5.0.0rc1`, so it might be helpful to check [the migration guide](https://github.com/huggingface/transformers/blob/main/MIGRATION_GUIDE_V5.md) from the Transformers library.
 
 #### vLLM
 
 You should install both Transformers and vLLM to use K-EXAONE model on vLLM server.
-You can install the latest version of vLLM with support for EXAONE-MoE architecture from [this repository](https://github.com/Aim-Highest/vllm/tree/add-exaone-moe). 
+You can install the latest version of vLLM with support for EXAONE-MoE architecture from [this repository](https://github.com/lkm2835/vllm/tree/add-exaone-moe). 
 
 #### SGLang
 
 You should install both Transformers and SGLang to use K-EXAONE model on SGLang server.
-You can install the latest version of SGLang with support for EXAONE-MoE architecture from [this repository](https://github.com/Aim-Highest/sglang).
+You can install the latest version of SGLang with support for EXAONE-MoE architecture from [this repository](https://github.com/xvyaward/sglang/tree/exaone_moe_official).
 
 #### llama.cpp
 
-You can install the latest version of llama.cpp with support for EXAONE-MoE architecture from [this repository](https://github.com/Aim-Highest/llama.cpp).
+You can install the latest version of llama.cpp with support for EXAONE-MoE architecture from [this repository](https://github.com/nuxlear/llama.cpp/tree/add-exaone-moe).
 Please refer to the [official build guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md) for details. 
 
 
@@ -410,6 +410,7 @@ generated_ids = model.generate(
     max_new_tokens=16384,
     temperature=1.0,
     top_p=0.95,
+    do_sample=True,
 )
 output_ids = generated_ids[0][input_ids['input_ids'].shape[-1]:]
 print(tokenizer.decode(output_ids, skip_special_tokens=True))
@@ -437,6 +438,7 @@ generated_ids = model.generate(
     max_new_tokens=1024,
     temperature=1.0,
     top_p=0.95,
+    do_sample=True,
 )
 output_ids = generated_ids[0][input_ids['input_ids'].shape[-1]:]
 print(tokenizer.decode(output_ids, skip_special_tokens=True))
@@ -482,6 +484,7 @@ generated_ids = model.generate(
     max_new_tokens=16384,
     temperature=1.0,
     top_p=0.95,
+    do_sample=True,
 )
 output_ids = generated_ids[0][input_ids['input_ids'].shape[-1]:]
 print(tokenizer.decode(output_ids, skip_special_tokens=True))
@@ -494,41 +497,40 @@ print(tokenizer.decode(output_ids, skip_special_tokens=True))
 
 You should install the `llama.cpp` library with the EXAONE-MoE implementations. Please refer to the [requirements](#requirements) section.
 
-After you install the library, you need to convert the HuggingFace model into GGUF format as below:
+After you install the library, you need to prepare a model file in GGUF format as below:
 ```bash
-# Download huggingface model weights
+# Download GGUF model weights (e.g. Q4_K_M)
+hf download LGAI-EXAONE/K-EXAONE-236B-A23B-GGUF --include "*Q4_K_M*" --local-dir .
+
+# Or convert huggingface model into GGUF format on your own
 hf download LGAI-EXAONE/K-EXAONE-236B-A23B --local-dir $YOUR_MODEL_DIR
+python convert_hf_to_gguf.py $YOUR_MODEL_DIR --outtype bf16 --outfile K-EXAONE-236B-A23B-BF16.gguf
 
-# Convert huggingface model into GGUF format
-python convert_hf_to_gguf.py $YOUR_MODEL_DIR --outtype bf16 --outfile K-EXAONE-236B-A23B-BF16.GGUF
+# If you want to use the lower precision than BF16, you need to quantize the model
+./llama-quantize K-EXAONE-236B-A23B-BF16.gguf K-EXAONE-236B-A23B-Q4_K_M.gguf Q4_K_M
 ```
-
-> [!Note]
-> We will update this section once we release official quantized models in GGUF format. Stay tuned!
 
 You can test the model with simple chat CLI by running the command below:
 ```bash
-./llama-cli -m K-EXAONE-236B-A23B-BF16.GGUF \
+./llama-cli -m K-EXAONE-236B-A23B-Q4_K_M.gguf \
     -ngl 99 \
     -fa on -sm row \
     --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0 \
     -c 131072 -n 32768 \
     --no-context-shift \
-    --jinja \
-    --chat-template-file $YOUR_MODEL_DIR/chat_template.jinja
+    --jinja
 ```
 
 You can also launch a server by running the command below:
 
 ```bash
-./llama-server -m K-EXAONE-236B-A23B-BF16.GGUF \
+./llama-server -m K-EXAONE-236B-A23B-Q4_K_M.gguf \
     -ngl 99 \
     -fa on -sm row \
     --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0 \
     -c 131072 -n 32768 \
     --no-context-shift \
     --jinja \
-    --chat-template-file $YOUR_MODEL_DIR/chat_template.jinja \
     --host 0.0.0.0 --port 8080
 ```
 
