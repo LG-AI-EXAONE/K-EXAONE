@@ -545,7 +545,7 @@ Ollama and LM-Studio are powered by llama.cpp, so they should be updated once ll
 
 ### TensorRT-LLM
 
-TensorRT-LLM support for the K-EXAONE model is being prepared. Please refer to the [EXAONE-MoE PR](https://github.com/NVIDIA/TensorRT-LLM/pull/10355) on TensorRT-LLM repository for details.
+TensorRT-LLM provides official support for the K-EXAONE model. Please refer to the [EXAONE Documentation](https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples/models/core/exaone) in the TensorRT-LLM repository for more information.
 
 ### vLLM
 
