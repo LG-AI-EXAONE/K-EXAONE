@@ -515,7 +515,7 @@ You can test the model with simple chat CLI by running the command below:
 ./llama-cli -m K-EXAONE-236B-A23B-Q4_K_M.gguf \
     -ngl 99 \
     -fa on -sm row \
-    --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0 \
+    --temp 1.0 --top-p 0.95 --min-p 0 \
     -c 131072 -n 32768 \
     --no-context-shift \
     --jinja
@@ -527,7 +527,7 @@ You can also launch a server by running the command below:
 ./llama-server -m K-EXAONE-236B-A23B-Q4_K_M.gguf \
     -ngl 99 \
     -fa on -sm row \
-    --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0 \
+    --temp 1.0 --top-p 0.95 --min-p 0 \
     -c 131072 -n 32768 \
     --no-context-shift \
     --jinja \
