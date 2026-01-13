@@ -10,8 +10,8 @@
   <a href="https://huggingface.co/collections/LGAI-EXAONE/k-exaone" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/🤗-HuggingFace-FC926C?style=for-the-badge" alt="HuggingFace">
   </a>
-  <a href="#" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/📝-Blog_(TBU)-E343BD?style=for-the-badge" alt="Blog">
+  <a href="https://www.lgresearch.ai/blog/view?seq=619" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/📝-Blog-E343BD?style=for-the-badge" alt="Blog">
   </a>
   <a href="https://arxiv.org/abs/2601.01739" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/📑-Technical_Report-684CF4?style=for-the-badge" alt="Technical Report">
@@ -44,7 +44,7 @@ We introduce **K-EXAONE**, a large-scale multilingual language model developed b
 - **Agentic Capabilities:** Demonstrates superior tool-use and search capabilities via **multi-agent strategies.**
 - **Safety & Ethics:** Aligned with **universal human values**, the model uniquely incorporates **Korean cultural and historical contexts** to address regional sensitivities often overlooked by other models. It demonstrates high reliability across diverse risk categories.
 
-For more details, please refer to the [technical report](https://arxiv.org/abs/2601.01739).
+For more details, please refer to the [technical report](https://arxiv.org/abs/2601.01739) and [blog](https://www.lgresearch.ai/blog/view?seq=619).
 
 ![main_figure](assets/main_figure.png)
 
