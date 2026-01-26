@@ -359,8 +359,7 @@ The base version of Transformers is `5.0.0rc1`, so it might be helpful to check 
 
 #### vLLM
 
-You should install both Transformers and vLLM to use K-EXAONE model on vLLM server.
-You can install the latest version of vLLM with support for EXAONE-MoE architecture from [this repository](https://github.com/lkm2835/vllm/tree/add-exaone-moe). 
+To serve the K-EXAONE model on a vLLM server, you should install both Transformers and vLLM (`vllm >= 0.14.0`).
 
 #### SGLang
 
@@ -369,8 +368,7 @@ You can install the latest version of SGLang with support for EXAONE-MoE archite
 
 #### llama.cpp
 
-You can install the latest version of llama.cpp with support for EXAONE-MoE architecture from [this repository](https://github.com/nuxlear/llama.cpp/tree/add-exaone-moe).
-Please refer to the [official build guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md) for details. 
+To use the K-EXAONE model with llama.cpp library, you should install `llama.cpp >= b7737`.
 
 
 ## Run K-EXAONE
@@ -495,7 +493,7 @@ print(tokenizer.decode(output_ids, skip_special_tokens=True))
 
 ### llama.cpp
 
-You should install the `llama.cpp` library with the EXAONE-MoE implementations. Please refer to the [requirements](#requirements) section.
+You should install the `llama.cpp` library with the version of `b7737` or after.
 
 After you install the library, you need to prepare a model file in GGUF format as below:
 ```bash
@@ -549,7 +547,7 @@ TensorRT-LLM provides official support for the K-EXAONE model. Please refer to t
 
 ### vLLM
 
-We support the K-EXAONE model on vLLM. You need to install our fork of the vLLM library to use the K-EXAONE model. Please check the [requirements](#requirements) section.
+We support the K-EXAONE model on vLLM. You need to install `vllm >= 0.14.0`.
 Practically, you can serve the model with a 256K context length using tensor parallel on 4 H200 GPUs.
 
 After you install the vLLM library with an EXAONE-MoE implementation, you can run the vLLM server by following command:
