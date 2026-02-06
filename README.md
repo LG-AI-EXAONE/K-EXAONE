@@ -28,7 +28,7 @@
 
 
 <div align="center">
-<table><tr><td>🆓 <span style="color: orange"> <b>Free API until Jan 28th, 2026</b>! </span> Try on ⬆️ FriendliAI ✈️</td></tr></table>
+<table><tr><td>🆓 <span style="color: orange"> <b>Free API until Feb 12th, 2026</b>! </span> Try on ⬆️ FriendliAI ✈️</td></tr></table>
 </div>
 <br>
 
@@ -350,12 +350,11 @@ The following table shows the evaluation results of the K-EXAONE model in reason
 
 ## Requirements
 
-Until the libraries officially support K-EXAONE, you need to install the requirements in our version with the EXAONE-MoE implementations. We will announce when these libraries are updated to support the K-EXAONE model.
+K-EXAONE is supported by multiple libraries. Please install the required libraries as needed for your use case.
 
 #### Transformers
 
-You can install the latest version of Transformers with support for EXAONE-MoE architecture from [this repository](https://github.com/nuxlear/transformers/tree/add-exaone-moe).
-The base version of Transformers is `5.0.0rc1`, so it might be helpful to check [the migration guide](https://github.com/huggingface/transformers/blob/main/MIGRATION_GUIDE_V5.md) from the Transformers library.
+You should install `transformers >= 5.1.0` for the K-EXAONE model.
 
 #### vLLM
 
@@ -363,8 +362,12 @@ To serve the K-EXAONE model on a vLLM server, you should install both Transforme
 
 #### SGLang
 
-You should install both Transformers and SGLang to use K-EXAONE model on SGLang server.
-You can install the latest version of SGLang with support for EXAONE-MoE architecture from [this repository](https://github.com/xvyaward/sglang/tree/exaone_moe_official).
+You should install both Transformers and SGLang to serve the K-EXAONE model on SGLang server.
+You can install the latest version of SGLang from source using the following commands.
+```bash
+git clone https://github.com/sgl-project/sglang.git
+pip install -e sglang/python
+```
 
 #### llama.cpp
 
@@ -373,7 +376,7 @@ To use the K-EXAONE model with llama.cpp library, you should install `llama.cpp 
 
 ## Run K-EXAONE
 
-You can use the K-EXAONE model with the Transformers library. For better quality, you should check the [usage guideline](#usage-guideline) section.
+You can use the K-EXAONE model with the Transformers library version `5.1.0` or later.
 
 ### Reasoning mode
 
@@ -596,7 +599,7 @@ vllm serve LGAI-EXAONE/K-EXAONE-236B-A23B \
 
 ### SGLang
 
-We support the K-EXAONE model on SGLang. You need to install our fork of the SGLang library to use the K-EXAONE model. Please check the [requirements](#requirements) section.
+We support the K-EXAONE model on SGLang. You need to install the latest version of the SGLang library from source. Please check the [requirements](#requirements) section.
 Practically, you can serve the model with a 256K context length using tensor parallel on 4 H200 GPUs.
 
 ```bash
