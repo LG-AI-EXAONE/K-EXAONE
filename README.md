@@ -28,7 +28,7 @@
 
 
 <div align="center">
-<table><tr><td>🆓 <span style="color: orange"> <b>Free API until Feb 12th, 2026</b>! </span> Try on ⬆️ FriendliAI ✈️</td></tr></table>
+<table><tr><td>Check out the <span style="color: orange"> <b>NVFP4+GPTQ weights by FuriosaAI</b>! </span> <a href="https://huggingface.co/FuriosaAIShareLGAI/K-EXAONE-236B-A23B-NVFP4A16-GPTQ" style="text-decoration: none;">link</a> </td></tr></table>
 </div>
 <br>
 
@@ -60,6 +60,7 @@ For more details, please refer to the [technical report](https://arxiv.org/abs/2
 
 ## News
 
+- 2026.05.11: FuriosaAI releases the NVFP4+GPTQ quantized weights for K-EXAONE. Please check out [the model](https://huggingface.co/FuriosaAIShareLGAI/K-EXAONE-236B-A23B-NVFP4A16)!
 - 2025.12.31 : 🚩 We release 🇰🇷 K-EXAONE, a 236B MoE model with 23B active params, efficiently scaling model capacity with significant enhancement. Please check out [the model](https://huggingface.co/collections/LGAI-EXAONE/k-exaone)!
 - 2025.07.15 : We released EXAONE 4.0, a hybrid reasoning model with enhanced usability including 32B and 1.2B. Please check out [these models](https://huggingface.co/collections/LGAI-EXAONE/exaone-40)!
 - 2025.03.18: We released the EXAONE Deep, reasoning enhanced language models, including 2.4B, 7.8B, and 32B. Check out [these models](https://huggingface.co/collections/LGAI-EXAONE/exaone-deep)!
