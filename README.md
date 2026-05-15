@@ -28,7 +28,7 @@
 
 
 <div align="center">
-<table><tr><td>Check out the <span style="color: orange"> <b>NVFP4+GPTQ weights by FuriosaAI</b>! </span> <a href="https://huggingface.co/FuriosaAIShareLGAI/K-EXAONE-236B-A23B-NVFP4A16-GPTQ" style="text-decoration: none;">link</a> </td></tr></table>
+<table><tr><td>Check out the <span style="color: orange"> <b>NVFP4+GPTQ weights by FuriosaAI</b>! </span> <a href="https://huggingface.co/FuriosaAIShareLGAI/K-EXAONE-236B-A23B-NVFP4A16-GPTQ" style="text-decoration: none;"> ➡️ link</a> </td></tr></table>
 </div>
 <br>
 
